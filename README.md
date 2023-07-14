@@ -17,13 +17,17 @@ L'architecture est principalement composée d'une classe environnement (appelé 
 
 Voici ci-dessous les principales fonctions et composantes de la classe JumboMana : 
 
-    > reset() : Fonction permettant de réinitialiser l'environnement à son état initial et renvoie l'observation de l'environnement correspondant à l'état initial
+    - reset() : Fonction permettant de réinitialiser l'environnement à son état initial et renvoie l'observation de l'environnement correspondant à l'état initial
 
-    > step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
+    - step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
 
-    - observation() : Fonction permettant d'observer l'état de l'environnement
+    - get_observation() : Fonction permettant d'observer l'état de l'environnement
 
-    - reward() : Fonction permettant à l'environnement de récompenser ou pénaliser l'agent en fonction de l'action qui a été éxécuté
+    - calculate_reward() : Fonction permettant à l'environnement de récompenser ou pénaliser l'agent en fonction de l'action qui a été éxécuté selon les modalités suivantes : 
+        * si l'agent fonce dans le mur, c'est-à-dire, qu'il touche une case noire alors le jeu s'arrête > pénalité
+        * si l'agent entre en collision avec le joueur alors le jeu s'arrête > pénalité
+        * plus le nombre de cases noires entre l'agent et le joueur augmente, moins l'IA est pénalisée
+        * s'il y a au moins 3 cases noire entre l'agent et le joueur alors le jeu s'arrête > récompense
 
     - done() : L'épisode est terminé ou non. Si c'est le cas, vous devrez peut-être mettre fin à la simulation ou réinitialiser l'environnement pour redémarrer l'épisode.
 
