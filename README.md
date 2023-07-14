@@ -17,9 +17,9 @@ L'architecture est principalement composée d'une classe environnement (appelé 
 
 Voici ci-dessous les principales fonctions et composantes de la classe JumboMana : 
 
-    - reset() : Fonction permettant de réinitialiser l'environnement à son état initial et renvoie l'observation de l'environnement correspondant à l'état initial
+    > reset() : Fonction permettant de réinitialiser l'environnement à son état initial et renvoie l'observation de l'environnement correspondant à l'état initial
 
-    - step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
+    > step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
 
     - observation() : Fonction permettant d'observer l'état de l'environnement
 
