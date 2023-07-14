@@ -47,10 +47,23 @@ L'architecture du modèle fonctionne de la façon suivante :
   3) On entraine ensuite un modèle de type PPO (main.py) sur les environnements de jeu sauvegarder (grid.pkl) et on sauvegarde le modèle (jumbo_mana_model)
   4) On test les performances du modèle (test.py) sur notre ensemble d'entrainement (grid.pkl)
 
+Fonctionnement de l'architecture du modèle et du jeu : 
+  1) le modèle défini une position aléatoire du joueur dans l'environnement
+  2) Le modèle défini ensuite la position de l'agent en fonction de celle du joueur, de sorte qu'il soit proche de lui
+  3) Le modèle visualise l'état de l'environnement
+  4) Le modèle décide de l'action à réalisé
+  5) L'environnement prend en compte l'action ce qui génère une nouvelle observation de l'environnement et donc un nouvel état
+  6) Les 3 dernières étapes sont réitérés jusqu'à ce que le modèle atteigne son objectif qui est de maximiser la somme de ses récompenses
+
+Plusieurs stratégies ont étés utilisées lors de la phase d'entrainement pour améliorer les performances du modèle qui au départ avait beaucoup de mal à converger. Parmi les pistes envisagées et testées : 
+  * Une première piste à consister à réaliser la phase d'entrainement sur des maps générés aléatoirement
+  * Une deuxième piste à consister à augmenter les montants des pénalités
+  * Une troisième piste à consister à complexifier les pénalités du modèle en introduisant notamment une pénalité sur l'angle formé par le triangle agent-joueur-case noire avec pour sommet de l'angle la case noire, de sorte que plus l'angle est proche de 180° moins l'agent est pénalisé
+  * 
 
 ### 2. Étapes à suivre pour reproduire les résultats
 
-La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. Si vous souhaitez modifier les maps d'entrainem
+La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. 
 
 Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vous suffit de de modifier dans l'étape d'initialisation de la classe d'environnement JumboMana les paramètres suivants : 
   - self.grid_size = 12 # taille de la grille
@@ -60,7 +73,3 @@ Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vo
 Une fois les nouvelles caractéristiques des maps définies, il faudra éxécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à éxécuter les fichiers main.py (phase d'entrainement), puis le fichier test.py (phase de test). 
 
 reward_mein : récompense moyenne (plus la récompense augmente plus le modèle performe)
-
-
-Tester le test.py 
-
