@@ -31,7 +31,7 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
         * plus le nombre de cases noires entre l'agent et le joueur augmente, moins l'IA est pénalisée
         * s'il y a au moins 3 cases noire entre l'agent et le joueur alors le jeu s'arrête > récompense
 
-    - render() : 
+    - render() : Fonction qui permet d’afficher l’environnement
 
     - done() : L'épisode est terminé ou non. Si c'est le cas, vous devrez peut-être mettre fin à la simulation ou réinitialiser l'environnement pour redémarrer l'épisode.
 
