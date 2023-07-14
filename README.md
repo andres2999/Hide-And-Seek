@@ -21,6 +21,8 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
 
+    - compute_visibility_state() : Fonction qui renvoie le nombre de cases noires entre l'agent et le joueur
+
     - get_observation() : Fonction permettant d'observer l'état de l'environnement
 
     - calculate_reward() : Fonction permettant à l'environnement de récompenser ou pénaliser l'agent en fonction de l'action qui a été éxécuté selon les modalités suivantes : 
@@ -28,6 +30,8 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
         * si l'agent entre en collision avec le joueur alors le jeu s'arrête > pénalité
         * plus le nombre de cases noires entre l'agent et le joueur augmente, moins l'IA est pénalisée
         * s'il y a au moins 3 cases noire entre l'agent et le joueur alors le jeu s'arrête > récompense
+
+    - render() : 
 
     - done() : L'épisode est terminé ou non. Si c'est le cas, vous devrez peut-être mettre fin à la simulation ou réinitialiser l'environnement pour redémarrer l'épisode.
 
