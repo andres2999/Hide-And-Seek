@@ -41,8 +41,11 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
 L'ensemble de définissions de la classe d'environnement JumboMana est contenue dans le fichier utils.py dans lequel vous pourrez visualiser plus en détails chacunes des fonctions précédemment énumérées. Les fichiers main.py et test.py permettent respectivement d'entrainer et de tester le modèle. Le fichier grid_gen.py permet de générer différents environnements de jeu et de les sauvegarder dans le fichier grid.pkl. Ces derniers sont ensuite utilisés lors de la phase d'entrainement du modèle. 
 
-Contcraitement, 
-
+L'architecture du modèle fonctionne de la façon suivante : 
+  1) On définit la classe environnement (utils.py)
+  2) À partir des caractéristiques de l'environnement définies (utils.py) on génère un ensemble d'environnement de jeu (grid_gen.py) que l'on sauvegarde (grid.pkl)
+  3) On entraine ensuite un modèle de type PPO (main.py) sur les environnements de jeu sauvegarder (grid.pkl) et on sauvegarde le modèle (jumbo_mana_model)
+  4) On test les performances du modèle (test.py) sur notre ensemble d'entrainement (grid.pkl)
 
 
 ### 2. Étapes à suivre pour reproduire les résultats
