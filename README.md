@@ -39,15 +39,9 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - render() : Fonction qui permet de visualiser l’environnement
 
-Concraitement, le fichier 
+L'ensemble de définissions de la classe d'environnement JumboMana est contenue dans le fichier utils.py dans lequel vous pourrez visualiser plus en détails chacunes des fonctions précédemment énumérées. Les fichiers main.py et test.py permettent respectivement d'entrainer et de tester le modèle. Le fichier grid_gen.py permet de générer différents environnements de jeu et de les sauvegarder dans le fichier grid.pkl. Ces derniers sont ensuite utilisés lors de la phase d'entrainement du modèle. 
 
-grid_gen : générer des grid
-grid.pkl = environnement généré et utilisé pour l'entrainement et le test
-
-main.py : fichier pour lancer l'entrainement
- jumbo_mana_zip : si l'en
-
-L'étape d'entrainement a nécesité l'utilisation de la librairie open source Gym afin de pouvoir tester l'algorithme de renforcement sur l'environnement développé. L'algorithme de renforcement learning utilisé durant cette étape est le PPO (Proximal Policy Optimization) de la librairie stable_baselines3.
+Contcraitement, 
 
 
 
