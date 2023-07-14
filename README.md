@@ -50,9 +50,9 @@ Contcraitement,
 La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. Si vous souhaitez modifier les maps d'entrainem
 
 Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vous suffit de de modifier dans l'étape d'initialisation de la classe d'environnement JumboMana les paramètres suivants : 
-        - self.grid_size = 12 # taille de la grille
-        - self.num_clusters = 5 # nombre de clusters de cases noires
-        - self.cluster_size = 10 # taille des clusters de cases noires
+  - self.grid_size = 12 # taille de la grille
+  - self.num_clusters = 5 # nombre de clusters de cases noires
+  - self.cluster_size = 10 # taille des clusters de cases noires
 
 Une fois les nouvelles caractéristiques des maps définies, il faudra éxécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à éxécuter les fichiers main.py (phase d'entrainement), puis le fichier test.py (phase de test). 
 
