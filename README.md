@@ -57,9 +57,17 @@ Fonctionnement de l'architecture du modèle et du jeu :
 
 Plusieurs stratégies ont étés utilisées lors de la phase d'entrainement pour améliorer les performances du modèle qui au départ avait beaucoup de mal à converger. Parmi les pistes envisagées et testées : 
   * Une première piste à consister à réaliser la phase d'entrainement sur des maps générés aléatoirement
-  * Une deuxième piste à consister à augmenter les montants des pénalités
-  * Une troisième piste à consister à complexifier les pénalités du modèle en introduisant notamment une pénalité sur l'angle formé par le triangle agent-joueur-case noire avec pour sommet de l'angle la case noire, de sorte que plus l'angle est proche de 180° moins l'agent est pénalisé
-  * 
+  * Une deuxième piste à consister à modifier les positions de départ de l'agent et du joueur
+  * Une troisième piste à consister à augmenter les montants des pénalités
+  * Une quatrième piste à consister à complexifier les pénalités du modèle en introduisant notamment une pénalité sur l'angle formé par le triangle agent-joueur-case noire avec pour sommet de l'angle la case noire, de sorte que plus l'angle est proche de 180° moins l'agent est pénalisé 
+  * Une cinquième piste à consister à modifier certains paramètres du modèle et notamment le timesteps
+
+Parmi les difficultés que j'ai rencontré, l'une d'elle est que j'avais des observations (spaces.Box) de formats dictionnaires de plusieurs dimensions (un space pour la position du joueur, un autre pour la position de l'agent, un space pour la grille, et un autre pour la visibility_state) et cela a fortement perturbé au départ l'entrainement de mon modèle en générant des erreurs de TYPE et de DIMENSION. Pour solutionner ce problème, j'ai décidé d'utiliser des observations où l'on a qu'une seule space contenant les 4 informations précédentes. 
+
+Le modèle final utilise un ensemble de maps spécifiques pour sa phase d'entrainement qui est préalablement générés et enregistrés, ainsi qu'un gain décroissant des pénalités en fonction du nombre de cases noires entre l'agent et la joueur. Afin de permettre une meilleure visualisation des performances du modèle, j'ai choisi de fixé le "sucess" à 3 cases noires entre l'agent et le joueur. La principale métrique utilisée pour l'estimation de la performance du modèle est le reward_mean qui correspond à la récompense moyenne du modèle, de sorte que plus la récompense moyenne augmente plus le modèle performe. Bien que ce modèle ne soit pas le plus complexe, il reste néanmoins performant dans sa capacité à apprendre à se dissimuler d'un joueur. 
+
+Les pistes à explorer pour l'amélioration du modèle pourrait être de l'entrainer davantage sur de nouveaux map plus complexes, une compléxification des règles de récompenses et pénalités, un finetunning des hyperparamètres du modèle ou encore une sélection beaucoup plus spécifiques des maps d'entrainements. 
+
 
 ### 2. Étapes à suivre pour reproduire les résultats
 
@@ -70,6 +78,4 @@ Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vo
   - self.num_clusters = 5 # nombre de clusters de cases noires
   - self.cluster_size = 10 # taille des clusters de cases noires
 
-Une fois les nouvelles caractéristiques des maps définies, il faudra éxécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à éxécuter les fichiers main.py (phase d'entrainement), puis le fichier test.py (phase de test). 
-
-reward_mein : récompense moyenne (plus la récompense augmente plus le modèle performe)
+Une fois les nouvelles caractéristiques des maps définies, il faudra exécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à exécuter les fichiers main.py (phase d'entrainement), puis le fichier test.py (phase de test). 
