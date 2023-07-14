@@ -37,9 +37,9 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - info() : Cette fonction fournit des informations supplémentaires en fonction de l'environnement, telles que le nombre de vies restantes ou des informations générales qui peuvent être utiles pour le débogage.
 
-Pour ce faire, j'ai utilisé la librairie open source Gym qui permet de développer et de comparer des algorithmes d'apprentissage par renforcement en fournissant une API standard pour communiquer entre les algorithmes d'apprentissage et les environnements, ainsi qu'un ensemble standard d'environnements conformes à cette API. Depuis sa sortie, l'API de Gym est devenue la norme dans ce domaine.
+Dans l'étape d'entrainement, j'ai utilisé la librairie open source Gym afin de pouvoir tester mon algorithme de renforcement sur l'environnement. 
 
 
 ### Étapes à suivre pour lancer le code
 
-Le bon fonctionnement du jeu nécessite au préalable l'installation des packages Python suivants : Numpy, Gym, Random, Bresenham
+Le bon fonctionnement du jeu nécessite au préalable l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3, 
