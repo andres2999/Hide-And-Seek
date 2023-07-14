@@ -40,6 +40,6 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 Pour ce faire, j'ai utilisé la librairie open source Gym qui permet de développer et de comparer des algorithmes d'apprentissage par renforcement en fournissant une API standard pour communiquer entre les algorithmes d'apprentissage et les environnements, ainsi qu'un ensemble standard d'environnements conformes à cette API. Depuis sa sortie, l'API de Gym est devenue la norme dans ce domaine.
 
 
-### Étapes à suivre pour faire marcher le code
+### Étapes à suivre pour lancer le code
 
-Le bon fonctionnement du jeu nécessite au préalable l'installation des packages suivants : Numpy, Gym, Random, Bresenham
+Le bon fonctionnement du jeu nécessite au préalable l'installation des packages Python suivants : Numpy, Gym, Random, Bresenham
