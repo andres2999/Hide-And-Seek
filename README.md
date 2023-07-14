@@ -8,7 +8,7 @@ Le but de ce projet est de créer une IA de dissimulation. A partir d'une matric
 </p>
 
 
-### Architecture
+### 1. Architecture de l'IA
 
 Pour répondre à la problématique posée, j'ai crée une IA qui à partir d'un environnement de jeu donné est capable de se dissimuler de la position d'un joueur donnée qui elle reste fixée durant toute la partie.
 
@@ -51,7 +51,7 @@ L'étape d'entrainement a nécesité l'utilisation de la librairie open source G
 
 
 
-### Étapes à suivre pour reproduire les résultats
+### 2. Étapes à suivre pour reproduire les résultats
 
 La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. Si vous souhaitez modifier les maps d'entrainem
 
