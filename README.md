@@ -21,7 +21,7 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - closest_position() : permet de définir la position aléatoire de l'agent en fonction du joueur (position proche et sans case noire entre les 2 au départ)
 
-    - generate_clusters() : génère des clusters de cases noires 
+    - generate_clusters() : Fonction qui génère des clusters de cases noires 
 
     - step() : Fonction permettant de prendre une action en entrée et de l'appliquer à l'environnement
 
@@ -29,7 +29,7 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - get_observation() : Fonction permettant d'observer l'état de l'environnement
 
-    - get_observation_space() : permet de définir l'espace d'observation pour le modèle
+    - get_observation_space() : Fonction qui permet de définir l'espace d'observation pour le modèle
 
     - calculate_reward() : Fonction permettant à l'environnement de récompenser ou pénaliser l'agent en fonction de l'action qui a été éxécuté selon les modalités suivantes : 
         * si l'agent fonce dans le mur, c'est-à-dire, qu'il touche une case noire alors le jeu s'arrête > pénalité
