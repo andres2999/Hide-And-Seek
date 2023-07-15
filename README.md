@@ -72,4 +72,4 @@ Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vo
   - self.num_clusters = 5 # nombre de clusters de cases noires
   - self.cluster_size = 10 # taille des clusters de cases noires
 
-Une fois les nouvelles caractéristiques des maps définies, il faudra exécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à exécuter les fichiers main.py (phase d'entrainement), puis le fichier test.py (phase de test). 
+Une fois les nouvelles caractéristiques des maps définies, il faudra exécuter grid_gen.py qui génèrera un ensemble de nouveaux maps qui seront enregistrés dans le fichier grid.pkl, à partir desquels l'étape d'entrainement pourra s'effectuer. Il ne vous restera plus qu'à exécuter le fichier main.py (phase d'entrainement), puis le fichier test.py (phase de test) pour visualiser les performances. 
