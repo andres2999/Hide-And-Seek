@@ -45,7 +45,7 @@ Fonctionnement de l'architecture du modèle et du jeu :
   1) le modèle défini une position aléatoire du joueur dans l'environnement
   2) Le modèle défini ensuite la position de l'agent en fonction de celle du joueur, de sorte qu'il soit proche de lui
   3) Le modèle visualise l'état de l'environnement
-  4) Le modèle décide de l'action à réalisé
+  4) Le modèle décide de l'action à réaliser
   5) L'environnement prend en compte l'action ce qui génère une nouvelle observation de l'environnement et donc un nouvel état
   6) Les 3 dernières étapes sont réitérés jusqu'à ce que le modèle atteigne son objectif qui est de maximiser la somme de ses récompenses
 
