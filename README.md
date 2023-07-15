@@ -65,7 +65,7 @@ Les pistes à explorer pour l'amélioration du modèle pourrait être de l'entra
 
 ### 2. Étapes à suivre pour reproduire les résultats
 
-La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. 
+La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, Stable_baselines3. Une fois les packages installées, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. 
 
 Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vous suffit de de modifier dans l'étape d'initialisation de la classe d'environnement JumboMana les paramètres suivants : 
   - self.grid_size = 12 # taille de la grille
