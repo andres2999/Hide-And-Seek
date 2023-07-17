@@ -19,7 +19,7 @@ Voici ci-dessous les principales fonctions et composantes de la classe JumboMana
 
     - reset() : Fonction permettant de réinitialiser l'environnement à son état initial et renvoie l'observation de l'environnement correspondant à l'état initial
 
-    - closest_position() : permet de définir la position aléatoire de l'agent en fonction du joueur (position proche et sans case noire entre les 2 au départ)
+    - closest_position() : Fonction permettant de définir la position aléatoire de l'agent en fonction du joueur (position proche et sans case noire entre les 2 au départ)
 
     - generate_clusters() : Fonction qui génère des clusters de cases noires 
 
@@ -67,7 +67,7 @@ Les pistes à explorer pour l'amélioration du modèle pourrait être de l'entra
 
 La reproduction des résultats nécessite en premier lieu l'installation des packages Python suivants : Numpy, Gym, Time, Random, Bresenham, Stable_baselines3. Une fois les packages installés, téléchargez l'ensemble des fichiers du répertoire courant. Une fois les téléchargements réalisés, il ne vous reste plus qu'à lancer le fichier test.py qui génèra les résultats du modèle que j'ai développé. 
 
-Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vous suffit de de modifier dans l'étape d'initialisation de la classe d'environnement JumboMana les paramètres suivants : 
+Si vous désirez relancer l'entrainement du modèle sur de nouvelles maps, il vous suffit de modifier dans l'étape d'initialisation de la classe d'environnement JumboMana les paramètres suivants : 
   - self.grid_size = 12 # taille de la grille
   - self.num_clusters = 5 # nombre de clusters de cases noires
   - self.cluster_size = 10 # taille des clusters de cases noires
